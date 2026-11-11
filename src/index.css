@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --color-primary: #334155;
+    --color-primary-dark: #1e293b;
+    --color-primary-light: #475569;
+    --color-accent: #475569;
+    --color-accent-light: #64748b;
+    --color-green: #16a34a;
+    --color-bg: #f8fafc;
+    --color-card-bg: rgba(255, 255, 255, 0.88);
+    --color-text: #0f172a;
+    --color-text-muted: #64748b;
+    --color-border: rgba(226, 232, 240, 0.85);
+    --color-input-bg: rgba(255, 255, 255, 0.9);
+    --color-header-bg: rgba(255, 255, 255, 0.85);
+  }
+
+  .dark {
+    --color-primary: #94a3b8;
+    --color-primary-dark: #0f172a;
+    --color-primary-light: #cbd5e1;
+    --color-accent: #cbd5e1;
+    --color-accent-light: #e2e8f0;
+    --color-green: #22c55e;
+    --color-bg: #0f172a;
+    --color-card-bg: rgba(15, 23, 42, 0.86);
+    --color-text: #f8fafc;
+    --color-text-muted: #94a3b8;
+    --color-border: rgba(51, 65, 85, 0.75);
+    --color-input-bg: rgba(30, 41, 59, 0.85);
+    --color-header-bg: rgba(15, 23, 42, 0.85);
+  }
+}
+
+body {
+  font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom helper classes */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: #0d3b66;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+.btn-accent:hover {
+  background-color: var(--color-accent-light);
+  transform: translateY(-1px);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn-whatsapp:hover {
+  background-color: #20bd5a;
+  transform: scale(1.02);
+}
+
+.card-custom {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-custom:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 12px 20px -3px rgba(13, 59, 102, 0.15), 0 4px 6px -4px rgba(13, 59, 102, 0.08);
+}
+
+/* Clear readable text in dark mode for form controls */
+.dark input,
+.dark select,
+.dark textarea {
+  color-scheme: dark;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+

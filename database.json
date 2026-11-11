@@ -1,0 +1,33 @@
+{
+  "products": [],
+  "users": {
+    "google_user_4123_gmail_com": {
+      "uid": "google_user_4123_gmail_com",
+      "email": "aliisam00000@gmail.com",
+      "displayName": "علي عصام",
+      "photoURL": "https://api.dicebear.com/7.x/initials/svg?seed=%D8%B9%D9%84%D9%8A%20%D8%B9%D8%B5%D8%A7%D9%85",
+      "createdAt": 1786821454184,
+      "provider": "google",
+      "isPhoneVerified": true,
+      "phoneNumber": "+249119806118"
+    },
+    "google_aliisam22222_gmail_com": {
+      "uid": "google_aliisam22222_gmail_com",
+      "email": "aliisam22222@gmail.com",
+      "displayName": "علي عصام",
+      "phoneNumber": null,
+      "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocIEQ-UyRoEx4N1AlCNsa2ix33C30IXnwmgBcxrUb1-i4aurNg=s96-c",
+      "neighborhood": "حي فريق قدام",
+      "village": "الولي",
+      "location": "قرية الولي - حي فريق قدام",
+      "createdAt": 1787474701351,
+      "isEmailVerified": true,
+      "isVerified": true,
+      "provider": "google",
+      "role": "عضو موثق بحساب Google",
+      "lastLoginAt": 1787474701351
+    }
+  },
+  "otps": {},
+  "emailOtps": {}
+}

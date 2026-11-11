@@ -1,0 +1,6 @@
+{
+  "name": "سوق الولي الإلكتروني",
+  "description": "تطبيق سوق الإلكترونيات والإعلانات المبوبة الشامل لقرية الولي مع توثيق الحسابات ببريد Google ورمز التحقق الفعلي وقاعدة بيانات سحابية موحدة",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

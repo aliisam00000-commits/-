@@ -1,0 +1,26 @@
+name: souq_alwali
+description: "تطبيق سوق الولي - التحقق الحقيقي بالبريد الإلكتروني وقاعدة بيانات Firestore"
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Firebase Core & Services
+  firebase_core: ^3.10.0
+  firebase_auth: ^5.4.1
+  cloud_firestore: ^5.6.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true

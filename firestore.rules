@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // تأمين مجموعة المستخدمين `users`
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // مجموعة التحقق من البريد الإلكتروني ورموز OTP
+    match /email_verifications/{emailDoc} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // إعلانات ومنتجات سوق الولي
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /orders/{orderId} {
+      allow read, write: if true;
+    }
+  }
+}
+

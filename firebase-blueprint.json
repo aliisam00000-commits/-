@@ -1,0 +1,56 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile in Souq Al-Wali village with verified email constraint",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "neighborhood": { "type": "string" },
+        "village": { "type": "string" },
+        "isVerified": { "type": "boolean" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "verifiedAt": { "type": "string" }
+      },
+      "required": ["uid", "name", "email", "village", "isVerified"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Permanent marketplace product listing in Souq Al-Wali",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "cat": { "type": "string" },
+        "price": { "type": "number" },
+        "currency": { "type": "string" },
+        "desc": { "type": "string" },
+        "img": { "type": "string" },
+        "phone": { "type": "string" },
+        "uid": { "type": "string" },
+        "sellerName": { "type": "string" },
+        "sellerNeighborhood": { "type": "string" },
+        "isSellerVerified": { "type": "boolean" },
+        "location": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "views": { "type": "number" },
+        "isFeatured": { "type": "boolean" }
+      },
+      "required": ["id", "title", "cat", "price", "phone", "sellerName", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "entity": "UserProfile",
+      "description": "User profile documents strictly secured for Al-Wali verified residents"
+    },
+    "/products/{productId}": {
+      "entity": "Product",
+      "description": "Permanent product listings in Souq Al-Wali database"
+    }
+  }
+}

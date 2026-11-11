@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d3b66" />
+      <stop offset="100%" stop-color="#07223b" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5d77f" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#aa8620" />
+    </linearGradient>
+    <linearGradient id="goldLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5d77f" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  
+  <!-- Outer Gold Ring -->
+  <circle cx="256" cy="256" r="216" fill="none" stroke="url(#goldGrad)" stroke-width="12" filter="url(#shadow)" />
+  <circle cx="256" cy="256" r="198" fill="none" stroke="#22c55e" stroke-width="4" stroke-dasharray="8 6" opacity="0.8" />
+
+  <!-- Inner Badge Container -->
+  <circle cx="256" cy="256" r="180" fill="#071e33" />
+
+  <!-- Shopping Cart / Bag Graphic -->
+  <g filter="url(#shadow)">
+    <!-- Bag Handle -->
+    <path d="M 206 170 C 206 126, 306 126, 306 170" fill="none" stroke="url(#goldGrad)" stroke-width="16" stroke-linecap="round" />
+    
+    <!-- Bag Body -->
+    <path d="M 166 170 L 346 170 L 326 340 C 324 356, 312 368, 296 368 L 216 368 C 200 368, 188 356, 186 340 Z" fill="url(#goldGrad)" />
+    
+    <!-- Bag Inner Pocket / Cart Lines -->
+    <rect x="200" y="210" width="112" height="70" rx="14" fill="#0d3b66" />
+    <path d="M 226 245 L 246 265 L 286 225" fill="none" stroke="url(#goldGrad)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Arabic Typography "سوق الولي" -->
+  <g text-anchor="middle" font-family="'Cairo', system-ui, sans-serif" font-weight="900">
+    <text x="256" y="420" font-size="44" fill="url(#goldLight)" letter-spacing="1">سوق الولي</text>
+    <text x="256" y="454" font-size="20" font-weight="700" fill="#34d399">الإلكتروني 🇸🇩</text>
+  </g>
+  
+  <!-- Active Live Indicator -->
+  <circle cx="410" cy="102" r="22" fill="#22c55e" stroke="#ffffff" stroke-width="6" filter="url(#shadow)" />
+</svg>
